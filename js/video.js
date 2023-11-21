@@ -31,19 +31,19 @@ document.querySelector("#pause").addEventListener("click", function() {
  //slow down current video speed by 10% and log new speed to console
  document.querySelector("#slower").addEventListener("click", function() {
 	video.playbackRate -= 0.1;
-	console.log("Speed is " + video.playbackRate);
+	console.log("Current Speed is " + video.playbackRate);
  });
 
  //Increase the current video speed each time the button is clicked and log the new speed to the console.  Change it by an amount proportional to the slow down. CHECK THIS!!  If you slow down three times and then speed up three times you should be within 5 digits of 100% again.
  document.querySelector("#faster").addEventListener("click", function() {
 	video.playbackRate += 0.1;
-	console.log("Speed is " + video.playbackRate);
+	console.log("Current Speed is " + video.playbackRate);
  });
 
  //Skip Ahead:Advance the current video by 10 seconds.  If the video length has been exceeded go back to the start of the video - no farther.   Log the current location of the video.
  document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime += 10;
-	console.log("Speed is " + video.currentTime);
+	console.log("Current Time is " + video.currentTime);
  });
 
  //Mute/unmute the video and update the text in the button.
