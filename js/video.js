@@ -50,6 +50,14 @@ document.querySelector("#pause").addEventListener("click", function() {
  document.querySelector("#mute").addEventListener("click", function() {
 	video.muted = !video.muted;
 	mute_button.textContent = video.muted ? "Unmute" : "Mute";
+	slider.textContent = video.muted ? "0" : video.volume * 100;
+	if (video.muted) {
+		slider.textContent = "0";
+		slider.value = 0;
+	  } else {
+		slider.textContent = video.volume * 100;
+		slider.value = video.volume * 100;
+	  }
  });
  //add and remove style
  document.querySelector("#vintage").addEventListener("click", function () {
